@@ -32,25 +32,24 @@ public class Facturacion {
         return registros;
     }
 
-    public List<Cliente> buscador() {
+    public List<Factura> buscador() {
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        Cliente cliente = null;
-        List<Cliente> clientes = new ArrayList<>();
+        Factura factu = null;
+        List<Factura> facturas = new ArrayList<>();
 
         try {
             conn = getConnection();
             stmt = conn.prepareStatement(BCliente);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                String nit = rs.getString("Nit");
-                String nombre = rs.getString("Nombre");
-                String Direccion = rs.getString("Direccion");
-                String Municipio = rs.getString("Municipio");
-                String Depa = rs.getString("Deparamento");
-                cliente = new Cliente(nit, nombre, Direccion, Municipio, Depa);
-                clientes.add(cliente);
+                int Numero = rs.getInt("NumeroFactura");
+                String fecha = rs.getString("Fecha");
+                String NameMueble = rs.getString("NombreMueble");
+                String NitCliente = rs.getString("NitCliente");
+                factu = new Factura(Numero, fecha, NameMueble, NitCliente);
+                facturas.add(factu);
               
             }
         } catch (SQLException ex) {
@@ -65,7 +64,7 @@ public class Facturacion {
             }
                 
         }
-        return clientes;
+        return facturas;
     }
 
 }

@@ -4,10 +4,10 @@ Personas\AgregarUsuario.class
 Ventas\Reportes.class
 Servlets\VerificacionUsuario.class
 Fabrica\Ensamblador.class
+Servlets\VerificaciondeFactura.class
 Fabrica\Piezas.class
 Administracion\Facturacion.class
 Priori\Conexiones.class
-Priori\main.class
 Personas\AgregarCliente.class
 Personas\Cliente.class
 Fabrica\Mueble.class

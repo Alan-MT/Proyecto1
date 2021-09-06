@@ -8,7 +8,7 @@ public class Piezas {
     private double Costo; 
 
     public Piezas(int Codigo, String TipoPieza, double Costo) {
-        this.Codigo = Codigo;
+        this.Codigo = CodigoRandom();
         this.TipoPieza = TipoPieza;
         this.Costo = Costo;
     }
@@ -37,6 +37,8 @@ public class Piezas {
         this.Costo = Costo;
     }
     
-    
+    public int CodigoRandom(){
+        return (int)(Math.random()*(1000-1)+1);
+    }
     
 }

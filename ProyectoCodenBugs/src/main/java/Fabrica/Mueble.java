@@ -4,7 +4,7 @@ public class Mueble {
     
     private int Identificador;
     private String Nombre;
-    private Double Precio;
+    private double Precio;
     private String FechaEnsamble;
     private String Ensamblador;
     private int CantidadPiezas;
@@ -65,5 +65,6 @@ public class Mueble {
     public void setCantidadPiezas(int CantidadPiezas) {
         this.CantidadPiezas = CantidadPiezas;
     }
+    
     
    }
